@@ -4,17 +4,25 @@
 
 // colors
 
-$color_white: #fff;
-$color_black: #000;
+$c_white: #fff;
+$c_black: #000;
 
 // $color_accent: #2947a9;
 // $color_title: #292e3d;
 
 // $color_hover: #F9995D;
 
-$font_1: 'Montserrat', sans-serif;
-// $font_2: "e-Ukraine", sans-serif;
-$transition_dur: 0.3s;
+$f_Inter: 'Inter', sans-serif;
+$f_Mukta: 'Mukta', sans-serif;
+$f_Manrope: 'Manrope', sans-serif;
+$f_Montserrat: 'Montserrat', sans-serif;
+$f_Nunito: 'Nunito', sans-serif;
+// $transition_dur: 0.3s;
+
+// containers
+
+$container_1: 131rem;
+$container_2: 152rem;
 
 // breakpoints
 $point_1: 1200px;

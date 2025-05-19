@@ -1,0 +1,101 @@
+@use './helpers/abstracts' as *;
+
+header {
+	padding: 3.3rem 0rem;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	background-color: $c_white;
+}
+.header_wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.hdr_left_side {
+	display: flex;
+	align-items: center;
+	gap: 0rem 4.7rem;
+}
+.header_logo {
+	height: 5.6rem;
+	width: auto;
+}
+.about_where {
+	display: flex;
+	gap: 0rem 2.7rem;
+}
+.about_where_btn {
+	height: 5.4rem;
+	line-height: 5.4rem;
+	font-size: 1.6rem;
+	font-family: $f_Nunito;
+	text-transform: uppercase;
+	border: .2rem solid #2CC84D;
+	border-radius: 1.5rem;
+	padding: 0rem 3.4rem;
+	color: #495340;
+	gap: .7rem;
+
+	&:nth-child(2) {
+		color: #326A00;
+	}
+
+	& span {
+		transition: all 0.3s ease;
+		background-color: #495340;
+		mask-image: url(../imgs/coockie_img.svg);
+		mask-position: center;
+		mask-size: contain;
+		mask-repeat: no-repeat;
+		height: 1.8rem;
+		width: 1.8rem;
+	}
+
+	&:nth-child(2) span {
+		background-color: #326A00;
+	}
+
+	&:hover {
+		color: #2CC84D;
+
+		& span {
+			background-color: #2CC84D;
+		}
+	}
+}
+.book_trial_btn {
+	color: $c_white;
+	background-color: #2CC84D;
+	height: 5rem;
+	line-height: 5rem;
+	font-family: $f_Inter;
+	font-weight: 500;
+	font-size: 2.1rem;
+	padding: 0rem 1.8rem;
+	border-radius: .6rem;
+	box-shadow: 0 3px 8px 0 rgba(156, 255, 177, 0.5), 0 0 0 2px #2cc84d, 0 2px 2px 0 rgba(0, 0, 0, 0.14), inset 0 2px 0 0 #9cffb1;
+
+	& span {
+		display: inline-block;
+		height: 1.8rem;
+		width: 1.8rem;
+		margin-right: 1.5rem;
+		transition: all 0.3s ease;
+		background-color: $c_white;
+		mask-image: url(../imgs/trial_star.svg);
+		mask-position: center;
+		mask-size: contain;
+		mask-repeat: no-repeat;
+	}
+	&:hover {
+		box-shadow: 0 3px 8px 0 rgba(156, 255, 177, 0.5), 0 0 0 2px #66fe86, 0 2px 2px 0 rgba(0, 0, 0, 0.14), inset 0 2px 0 0 #368848;
+		background-color: #2eb24a;
+		color: #abffbd;
+
+		& span {
+		background-color: #abffbd;
+	}
+	}
+}

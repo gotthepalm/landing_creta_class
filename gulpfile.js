@@ -40,8 +40,8 @@ function htmlMin() {
 async function fonts() {
 	const ttf2woff2 = (await import('gulp-ttf2woff2')).default;
 
-	// Copy the original fonts
-	src('src/fonts/**/*', { encoding: false }).pipe(dest('app/fonts'));
+	// // Copy the original fonts
+	// src('src/fonts/**/*', { encoding: false }).pipe(dest('app/fonts'));
 
 	// Convert only .ttf to .woff2
 	return src('src/fonts/**/*.ttf', { encoding: false })
