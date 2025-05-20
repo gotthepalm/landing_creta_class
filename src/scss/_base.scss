@@ -105,6 +105,7 @@ h1 {
     transition: all 0.3s ease;
 	cursor: pointer;
 	text-decoration: none;
+	user-select: none;
 }
 .section_title {
 	font-family: $f_Manrope;
