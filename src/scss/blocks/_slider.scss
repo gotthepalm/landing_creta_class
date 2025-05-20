@@ -78,7 +78,8 @@
 	display: flex;
 }
 .slider_card {
-	height: 35.8rem;
+	min-height: 35.8rem;
+	// height: auto;
 	background-color: #974E24;
 	width: calc((100% - 8rem) / 3);
 	border-radius: 4rem;
