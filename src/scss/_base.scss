@@ -35,11 +35,11 @@ body {
 	width: 100%;
 }
 
-.section_margin_bottom__160 {
-	margin-bottom: 16rem;
+.section__160 {
+	padding-top: 16rem;
 }
-.section_margin_bottom__120 {
-	margin-bottom: 12rem;
+.section__120 {
+	padding-top: 12rem;
 }
 .container {
 	width: 100%;
@@ -60,10 +60,12 @@ body {
 	justify-content: space-between;
 }
 .container_1 {
-	max-width: $container_1;
+	max-width: 133rem;
+	padding: 0 1rem;
 }
 .container_2 {
-	max-width: $container_2;
+	max-width: 153rem;
+	padding: 0 1rem;
 }
 
 header,

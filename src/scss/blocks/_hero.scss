@@ -1,0 +1,132 @@
+@use './helpers/abstracts' as *;
+
+.hero {
+	font-family: $f_Inter;
+}
+.hero_column_1 {
+	max-width: 60rem;
+	width: 100%;
+	position: relative;
+	top: 0;
+}
+.hero_column_2 {
+	position: relative;
+	top: 0;
+}
+.hero_title {
+	font-weight: 700;
+	font-size: 6.2rem;
+	margin-bottom: 11rem;
+}
+.hero_form {
+	margin-bottom: 2rem;
+}
+.hero_form__title {
+	font-weight: 700;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	margin-bottom: 3rem;
+}
+.hero_form_radio_wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 2.6rem;
+	margin-bottom: 3rem;
+}
+.hero_form__radio {
+	height: 6rem;
+	line-height: 6rem;
+	font-weight: 700;
+	font-size: 2rem;
+	padding: 0 3rem;
+	border-radius: 0.8rem;
+	border-bottom: 4.92px solid rgba(0, 0, 0, 0.15);
+	border-left: 1.64px solid rgba(0, 0, 0, 0.15);
+	border-right: 1.64px solid rgba(0, 0, 0, 0.15);
+	border-top: 1.64px solid rgba(0, 0, 0, 0.15);
+	transition: all 0.1s ease;
+	span {
+		font-size: 2.4rem;
+	}
+	&:has(input:checked) {
+		box-shadow:
+			inset 0px 0px 0px 3px rgba(0, 0, 0, 0.15);
+		// background-color: #f7f7f7;
+	}
+	input {
+		display: none;
+	}
+}
+.hero_form_submit__button {
+	height: 6.6rem;
+	line-height: 6.6rem;
+	padding: 0 4.8rem;
+	background-color: #ff7b3a;
+	background-image: url(../imgs/form_gradient_button.png);
+	background-size: 60rem auto;
+	background-position: -38.8rem -38rem;
+	background-repeat: no-repeat;
+	border-radius: 0.9rem;
+	font-weight: 700;
+	font-size: 1.8rem;
+	color: $c_white;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+	input {
+		display: none;
+	}
+	&:hover {
+		// background-color: #ec7235;
+		animation: 0.4s form_button_background 1 linear alternate;
+	}
+}
+.hero_column_1_row__1,
+.hero_column_1_row__2 {
+	display: flex;
+	align-items: center;
+}
+.hero_column_1_row__1 {
+	font-weight: 500;
+	font-size: 1.8rem;
+	margin-bottom: 8px;
+	color: #4b4b4b;
+
+	.span_1 {
+		font-size: 3.1rem;
+		color: $c_black;
+		margin-right: 6px;
+	}
+	.span_2 {
+		color: #2cc84d;
+		font-weight: 700;
+		padding-left: 6px;
+	}
+}
+.hero_column_1_row__2 {
+	font-weight: 500;
+	font-size: 1.8rem;
+	color: #838383;
+
+	span {
+		font-weight: 700;
+		color: #ff7c3b;
+		text-transform: uppercase;
+		padding-left: 6px;
+	}
+}
+.hero_img {
+	height: auto;
+	width: 68rem;
+	object-fit: contain;
+}
+.hero_decor__1 {
+	position: absolute;
+	top: -7.4rem;
+	left: -4.8rem;
+}
+.hero_decor__2 {
+	position: absolute;
+	top: -7rem;
+	left: -19rem;
+}

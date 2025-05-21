@@ -7,6 +7,7 @@ header {
 	z-index: 100;
 	width: 100%;
 	background-color: $c_white;
+	box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.05);
 }
 .hdr_left_side {
 	display: flex;
