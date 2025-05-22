@@ -30,18 +30,33 @@ tabsNavAll.forEach(tabNav => {
 });
 
 // Accordions for FAQ
-const accordionTitleAll = document.querySelectorAll("[data-accordion-title]");
+const accordionTitleAll = document.querySelectorAll('[data-accordion-title]');
 
-	accordionTitleAll.forEach(function (item) {
-		item.addEventListener("click", function () {
-			if (item.classList.contains("active")) {
-				item.classList.remove("active");
-				return;
-			} else {
-				accordionTitleAll.forEach(function (i) {
-					i.classList.remove("active");
-				});
-				item.classList.add("active");
-			}
-		});
+accordionTitleAll.forEach(function (item) {
+	if (item.classList.contains('active')) {
+		const content = item.nextElementSibling;
+		content.style.height = content.scrollHeight + 'px';
+	}
+});
+
+accordionTitleAll.forEach(function (item) {
+	item.addEventListener('click', function () {
+		if (item.classList.contains('active')) {
+			item.classList.remove('active');
+			const content = item.nextElementSibling;
+			content.style.height = '';
+			return;
+		} else {
+			accordionTitleAll.forEach(function (i) {
+				i.classList.remove('active');
+			});
+			item.classList.add('active');
+			accordionTitleAll.forEach(function (item) {
+				const content = item.nextElementSibling;
+				content.style.height = '';
+			});
+			const content = item.nextElementSibling;
+			content.style.height = content.scrollHeight + 'px';
+		}
 	});
+});
