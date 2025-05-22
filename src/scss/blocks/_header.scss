@@ -7,12 +7,12 @@ header {
 	z-index: 100;
 	width: 100%;
 	background-color: $c_white;
-	box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.05);
+	box-shadow: 0 1rem 5rem 0 rgba(0, 0, 0, 0.05);
 }
 .hdr_left_side {
 	display: flex;
 	align-items: center;
-	gap: 0rem 4.7rem;
+	gap: 0rem 4.6rem;
 }
 .header_logo {
 	height: 5.6rem;
@@ -20,7 +20,7 @@ header {
 }
 .about_where {
 	display: flex;
-	gap: 0rem 2.7rem;
+	gap: 0rem 2.6rem;
 }
 .about_where_btn {
 	height: 5.4rem;
@@ -28,7 +28,7 @@ header {
 	font-size: 1.6rem;
 	font-family: $f_Nunito;
 	text-transform: uppercase;
-	border: .2rem solid #2CC84D;
+	border: 2px solid #2CC84D;
 	border-radius: 1.5rem;
 	padding: 0rem 3.4rem;
 	color: #495340;

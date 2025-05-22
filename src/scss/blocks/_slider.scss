@@ -1,12 +1,8 @@
 @use './helpers/abstracts' as *;
 
 .slider {
-	& .section_description {
-		font-family: $f_Inter;
-		font-weight: 400;
-		font-size: 2rem;
-		margin-bottom: 5rem;
-	}
+	max-width: 100%;
+	width: 100%;
 }
 .all_slider {
 	max-width: 100%;
@@ -70,7 +66,7 @@
 }
 .swiper-pagination-bullet-active {
 	background: #974E24;
-	border: .2rem solid transparent;
+	border: 2px solid transparent;
 	opacity: 1;
 }
 .swiper-slide {
@@ -172,7 +168,7 @@
 		mask-repeat: no-repeat;
 		flex-shrink: 0;
 		margin-right: 0.9rem;
-		margin-top: .4rem;
+		margin-top: 4px;
 	}
 }
 .slider_text_row__text {

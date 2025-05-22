@@ -14,7 +14,6 @@ body {
 }
 
 body {
-	font-family: $f_Montserrat;
 	font-weight: 400;
 }
 
@@ -35,11 +34,11 @@ body {
 	width: 100%;
 }
 
-.section__160 {
+.section_padding_top_160 {
 	padding-top: 16rem;
 }
-.section__120 {
-	padding-top: 12rem;
+.section_padding_top_180 {
+	padding-top: 18rem;
 }
 .container {
 	width: 100%;
@@ -100,11 +99,11 @@ h1 {
 }
 .base_button {
 	display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    white-space: nowrap;
-    transition: all 0.3s ease;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	white-space: nowrap;
+	transition: all 0.3s ease;
 	cursor: pointer;
 	text-decoration: none;
 	user-select: none;
@@ -117,5 +116,11 @@ h1 {
 	&:has(+ .section_description) {
 		margin-bottom: 1rem;
 	}
+}
+.section_description {
+	font-family: $f_Inter;
+	font-weight: 400;
+	font-size: 2rem;
+	margin-bottom: 6rem;
 }
 /* remove */

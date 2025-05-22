@@ -3,6 +3,7 @@ const { src, dest, watch, parallel, series } = require('gulp');
 const sass = require('gulp-dart-sass');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
+const { existsSync } = require('fs');
 (fileinclude = require('gulp-file-include')),
 	(del = require('del')),
 	(htmlmin = require('gulp-htmlmin')),
@@ -37,11 +38,35 @@ function htmlMin() {
 		.pipe(dest(cfg.outputDir));
 }
 
+// experimental
+// converts otf to ttf, woff, woff2
+// needs gulp-fonter
+// not stable
+
+// async function fontsOTF() {
+// 	const fonter = (await import('gulp-fonter')).default;
+// 	const ttf2woff2 = (await import('gulp-ttf2woff2')).default;
+
+// 	return src('src/fonts/**/*.{ttf,otf}', { encoding: false })
+// 		.pipe(plumber({ errorHandler: notify.onError('Font Error: <%= error.message %>') }))
+// 		.pipe(fonter({ formats: ['ttf', 'woff'] }))
+// 		.pipe(dest('app/fonts'))
+// 		.pipe(src('src/fonts/**/*.ttf'))
+// 		.pipe(ttf2woff2())
+// 		.pipe(dest('app/fonts'));
+// }
+
 async function fonts() {
 	const ttf2woff2 = (await import('gulp-ttf2woff2')).default;
 
-	// // Copy the original fonts
-	// src('src/fonts/**/*', { encoding: false }).pipe(dest('app/fonts'));
+	// Check: if there is no folder, exit
+	if (!existsSync('src/fonts')) {
+		return;
+	}
+	// Copy the original fonts
+	await new Promise(resolve => {
+		src('src/fonts/**/*', { encoding: false }).pipe(dest('app/fonts')).on('end', resolve);
+	});
 
 	// Convert only .ttf to .woff2
 	return src('src/fonts/**/*.ttf', { encoding: false })
@@ -49,7 +74,6 @@ async function fonts() {
 		.pipe(ttf2woff2())
 		.pipe(dest('app/fonts'));
 }
-
 
 function styles() {
 	return src(cfg.srcDir + 'scss/**/*.{scss,sass}', { sourcemaps: true })
@@ -99,12 +123,18 @@ function scripts() {
 }
 
 function imageSync() {
+	if (!existsSync('src/imgs')) {
+		return Promise.resolve();
+	}
 	return src('src/imgs/**/*', { encoding: false })
 		.pipe(dest('app/imgs'))
 		.pipe(browserSync.stream({ once: true }));
 }
 
 async function imageSyncMin() {
+		if (!existsSync('src/imgs')) {
+		return Promise.resolve();
+	}
 	const imagemin = (await import('gulp-imagemin')).default;
 	const imageminPngquant = (await import('imagemin-pngquant')).default;
 	const imageminMozjpeg = (await import('imagemin-mozjpeg')).default;

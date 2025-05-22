@@ -28,3 +28,20 @@ tabsNavAll.forEach(tabNav => {
 		targetContent.classList.add('active');
 	});
 });
+
+// Accordions for FAQ
+const accordionTitleAll = document.querySelectorAll("[data-accordion-title]");
+
+	accordionTitleAll.forEach(function (item) {
+		item.addEventListener("click", function () {
+			if (item.classList.contains("active")) {
+				item.classList.remove("active");
+				return;
+			} else {
+				accordionTitleAll.forEach(function (i) {
+					i.classList.remove("active");
+				});
+				item.classList.add("active");
+			}
+		});
+	});
