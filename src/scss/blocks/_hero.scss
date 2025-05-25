@@ -4,7 +4,7 @@
 	@extend %section_padding;
 }
 .hero {
-	@extend %base_wrapper;
+	@extend %base_wrapper_v2;
 	
 	font-family: $f_Inter;
 }
