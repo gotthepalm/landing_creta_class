@@ -1,10 +1,17 @@
 @use './helpers/abstracts' as *;
 
+.tabs_section {
+	@extend %section_padding;
+}
 .tabs {
+	@extend %base_wrapper;
+
 	max-width: 100%;
 	width: 100%;
 }
 .tabs__in {
+	@extend %base_wrapper;
+
 	max-width: 100%;
 	width: 100%;
 }
@@ -68,10 +75,13 @@
 	}
 }
 .tabs_contents {
+	@extend %base_wrapper;
+
 	max-width: 100%;
 	width: 100%;
 }
 .tab_content {
+	@extend %base_wrapper_v2;
 	max-width: 100%;
 	width: 100%;
 	padding: 7rem 9rem;

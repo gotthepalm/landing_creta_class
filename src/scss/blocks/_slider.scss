@@ -1,6 +1,11 @@
 @use './helpers/abstracts' as *;
 
+.slider_section {
+	@extend %section_padding;
+}
 .slider {
+	@extend %base_wrapper;
+	
 	max-width: 100%;
 	width: 100%;
 }

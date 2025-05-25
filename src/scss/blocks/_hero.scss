@@ -1,6 +1,11 @@
 @use './helpers/abstracts' as *;
 
+.hero_section {
+	@extend %section_padding;
+}
 .hero {
+	@extend %base_wrapper;
+	
 	font-family: $f_Inter;
 }
 .hero_column_1 {

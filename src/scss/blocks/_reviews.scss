@@ -1,6 +1,11 @@
 @use './helpers/abstracts' as *;
 
+.reviews_section {
+	@extend %section_padding;
+}
 .reviews {
+    @extend %base_wrapper;
+    
     background-image: url(../imgs/reviews_section_img.png);
     background-repeat: no-repeat;
     background-position: center;

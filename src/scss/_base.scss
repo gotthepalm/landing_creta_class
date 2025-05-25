@@ -31,20 +31,10 @@ body {
 .section {
 	width: 100%;
 }
-.section_padding_160 {
-	padding: 8rem 0;
-	&:first-of-type {
-		padding-top: 16rem;
-	}
-	&:last-of-type {
-		padding-bottom: 16rem;
-	}
-}
 .container {
 	width: 100%;
 	margin: 0 auto;
 }
-// .section_wrapper,
 .base_wrapper {
 	display: flex;
 	flex-direction: column;

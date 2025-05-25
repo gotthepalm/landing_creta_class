@@ -1,6 +1,14 @@
 @use './helpers/abstracts' as *;
 
+.faq {
+	@extend %base_wrapper;
+}
+.faq_section {
+	@extend %section_padding;
+}
 .accordions_wrapper {
+	@extend %base_wrapper;
+
 	gap: 3rem 0;
 	max-width: 100%;
 	width: 100%;
