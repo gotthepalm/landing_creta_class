@@ -13,9 +13,8 @@
 	margin-bottom: 2.5rem;
 }
 .tab_button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	@extend %base_button;
+
 	flex-direction: column;
 	border-block: 2px solid #ff6d25;
 	font-family: $f_Inter;

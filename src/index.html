@@ -14,22 +14,29 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			@@include('./html/header.html')
+			<div class="section header_section">
+				<div class="container container_2">@@include('./html/header.html')</div>
+			</div>
 			<main class="main">
-				<section class="section hero_section section_padding_top_160">
+				<section class="section hero_section section_padding_160">
 					<div class="container container_2">@@include('./html/hero.html')</div>
 				</section>
-				<section class="section slider_section section_padding_top_180">
+				<section class="section slider_section section_padding_160">
 					<div class="container container_1">@@include('./html/slider.html')</div>
 				</section>
-				<section class="section tabs_section section_padding_top_160">
+				<section class="section tabs_section section_padding_160">
 					<div class="container container_1">@@include('./html/tabs.html')</div>
 				</section>
-				<section class="section faq_section section_padding_top_160">
+				<section class="section faq_section section_padding_160">
 					<div class="container container_1">@@include('./html/faq.html')</div>
 				</section>
+				<section class="section reviews_section section_padding_160">
+					<div class="container container_2">@@include('./html/reviews.html')</div>
+				</section>
 			</main>
-			@@include('./html/footer.html')
+			<div class="section footer_section">
+				<div class="container container_2">@@include('./html/footer.html')</div>
+			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="js/script.min.js"></script>

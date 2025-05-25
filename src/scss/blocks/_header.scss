@@ -1,13 +1,21 @@
 @use './helpers/abstracts' as *;
 
-header {
-	padding: 3.3rem 0rem;
+.header_section {
+	background-color: $c_white;
+	box-shadow: 0 1rem 5rem 0 rgba(0, 0, 0, 0.05);
 	position: fixed;
 	top: 0;
 	z-index: 100;
+	padding: 3.2rem 0rem;
+}
+header {
+	max-width: 100%;
 	width: 100%;
-	background-color: $c_white;
-	box-shadow: 0 1rem 5rem 0 rgba(0, 0, 0, 0.05);
+}
+.header_wrapper {
+	max-width: 100%;
+	width: 100%;
+	justify-content: space-between;
 }
 .hdr_left_side {
 	display: flex;
@@ -18,11 +26,17 @@ header {
 	height: 5.6rem;
 	width: auto;
 }
+.header_logo__img {
+	width: 25.6rem;
+	height: auto;
+}
 .about_where {
 	display: flex;
 	gap: 0rem 2.6rem;
 }
 .about_where_btn {
+	@extend %base_button;
+
 	height: 5.4rem;
 	line-height: 5.4rem;
 	font-size: 1.6rem;
@@ -62,6 +76,8 @@ header {
 	}
 }
 .book_trial_btn {
+	@extend %base_button;
+	
 	color: $c_white;
 	background-color: #2CC84D;
 	height: 5rem;

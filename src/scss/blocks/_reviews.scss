@@ -1,0 +1,32 @@
+@use './helpers/abstracts' as *;
+
+.reviews {
+    background-image: url(../imgs/reviews_section_img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .section_title {
+        margin-bottom: 14rem;
+    }
+}
+.reviews__title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #FE9611;
+    text-align: center;
+    padding-top: 9rem;
+    margin-bottom: 6rem;
+}
+.reviews__text {
+    display: flex;
+    gap: 36rem;
+    max-width: 98rem;
+    width: 100%;
+    margin-bottom: 16.4rem;
+    div {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 158%;
+        color: #3C3C3C;
+    }
+}

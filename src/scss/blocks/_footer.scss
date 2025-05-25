@@ -1,0 +1,29 @@
+@use './helpers/abstracts' as *;
+
+.footer_section {
+	background-color: #FFF0CB;
+	padding: 4.6rem 0rem;
+}
+.footer_left_side {
+	align-items: flex-start;
+}
+.footer_logo__img {
+	width: 25.6rem;
+	height: auto;
+	margin-bottom: 2.4rem
+}
+.footer_button {
+	@extend %orange_button;
+}
+.footer_right_side {
+	max-width: 58rem;
+	width: 100%;
+	align-items: flex-start;
+	gap: 2.4rem 0;
+	a {
+		text-decoration: none;
+		color: $c_black;
+		font-weight: 400;
+		font-size: 2.2rem;
+	}
+}

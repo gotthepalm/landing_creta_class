@@ -17,17 +17,13 @@
 	overflow-y: hidden;
 }
 .accordion__content {
-	visibility: hidden;
-	// max-height: 0;
 	height: 0;
-	pointer-events: none;
 	color: #424242;
 	font-size: 2.7rem;
 	font-weight: 500;
 	padding: 0 5rem 0rem 5rem;
 	box-sizing: content-box;
-	transition:
-		all 0.5s ease;
+	transition: all 0.5s ease;
 	ol {
 		color: #666666;
 		padding-top: 2rem;
@@ -48,10 +44,12 @@
 		background-position: center;
 		background-size: contain;
 	}
+	&:not(.active) + .accordion__content {
+		visibility: hidden;
+		pointer-events: none;
+	}
 	&.active {
 		& + .accordion__content {
-			visibility: visible;
-			pointer-events: auto;
 			padding: 0 5rem 5rem 5rem;
 		}
 		span {

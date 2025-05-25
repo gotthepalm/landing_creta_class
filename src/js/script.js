@@ -36,6 +36,7 @@ accordionTitleAll.forEach(function (item) {
 	if (item.classList.contains('active')) {
 		const content = item.nextElementSibling;
 		content.style.height = content.scrollHeight + 'px';
+		console.log(content.scrollHeight);
 	}
 });
 

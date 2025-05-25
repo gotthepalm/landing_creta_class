@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 @mixin st_btn {
 	display: inline-flex;
 	justify-content: center;
@@ -9,7 +11,41 @@
 	cursor: pointer;
 	text-decoration: none;
 }
-
+%base_button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	white-space: nowrap;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	text-decoration: none;
+	user-select: none;
+}
+%orange_button {
+	@extend %base_button;
+	height: 6.6rem;
+	line-height: 6.6rem;
+	padding: 0 4.8rem;
+	background-color: #ff7b3a;
+	background-image: url(../imgs/form_gradient_button.png);
+	background-size: 60rem auto;
+	background-position: -38.8rem -38rem;
+	background-repeat: no-repeat;
+	border-radius: 0.9rem;
+	font-weight: 700;
+	font-size: 1.8rem;
+	color: $c_white;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+	input {
+		display: none;
+	}
+	&:hover {
+		// background-color: #ec7235;
+		animation: 0.4s form_button_background 1 linear alternate;
+	}
+}
 //color extends
 // %transp_btn_1 {
 // 	@include st_btn;
