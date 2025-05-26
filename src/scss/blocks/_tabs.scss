@@ -1,4 +1,4 @@
-@use './helpers/abstracts' as *;
+@use '../helpers/abstracts' as *;
 
 .tabs_section {
 	@extend %section_padding;
