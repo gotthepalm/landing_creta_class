@@ -1,5 +1,8 @@
 @use './helpers/abstracts' as *;
 
+:root {
+	--header-height: 12rem;
+}
 html {
 	// font-size: calc(100dvw / 1920 * 10);
 	font-size: 10px;
@@ -99,5 +102,38 @@ h1 {
 	font-weight: 400;
 	font-size: 2rem;
 	margin-bottom: 6rem;
+}
+.top_button {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	z-index: 96;
+	background-color: #f7f7fa;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	mask-repeat: no-repeat;
+	mask-position: center;
+	height: 8rem;
+	width: 8rem;
+	border: 4px solid #c5c7ce;
+	border-bottom: 8px solid #c5c7ce;
+	border-radius: 2.5rem;
+	transition: all 0.2s ease;
+	&:not(.active) {
+		opacity: 0;
+		pointer-events: none;
+	}
+	span {
+		background-color: #78757c;
+		mask-image: url(../imgs/accordion_icon.svg);
+		mask-repeat: no-repeat;
+		mask-position: center;
+		mask-size: contain;
+		transform: rotate(180deg);
+		display: inline-block;
+		height: 3rem;
+		width: 3rem;
+	}
 }
 /* remove */

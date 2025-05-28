@@ -1,16 +1,30 @@
-@mixin bp($width, $direction: max) {
-	@if $direction == min {
-		@media screen and (min-width: $width) {
-			// @media screen and (width >= $width) {
-			@content;
-		}
-	} @else {
-		@media screen and (max-width: $width) {
-			// @media screen and (width <= $width) {
-			@content;
-		}
+// @mixin bp($width, $direction: max) {
+// 	@if $direction == min {
+// 		@media screen and (min-width: $width) {
+// 			// @media screen and (width >= $width) {
+// 			@content;
+// 		}
+// 	} @else {
+// 		@media screen and (max-width: $width) {
+// 			// @media screen and (width <= $width) {
+// 			@content;
+// 		}
+// 	}
+// }
+@mixin bp-max($max) {
+	@media screen and (max-width: $max) {
+		@content;
 	}
 }
-
+@mixin bp-min($min) {
+	@media screen and (min-width: $min) {
+		@content;
+	}
+}
+@mixin bp-between($min, $max) {
+	@media screen and (min-width: $min) and (max-width: $max) {
+		@content;
+	}
+}
 // @include bp($point_1, min)
 // @include bp($point_2)
