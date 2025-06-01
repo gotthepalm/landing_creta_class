@@ -92,6 +92,7 @@ h1 {
 	font-family: $f_Manrope;
 	font-weight: 700;
 	font-size: 4.8rem;
+	text-align: center;
 
 	&:has(+ .section_description) {
 		margin-bottom: 1rem;
@@ -102,6 +103,7 @@ h1 {
 	font-weight: 400;
 	font-size: 2rem;
 	margin-bottom: 6rem;
+	text-align: center;
 }
 .top_button {
 	position: fixed;

@@ -5,8 +5,14 @@
 }
 .hero {
 	@extend %base_wrapper_v2;
-	
+
 	font-family: $f_Inter;
+	@include bp-max($point_3) {
+		flex-direction: column;
+	}
+	@include bp-min($point_2) {
+		flex-direction: row;
+	}
 }
 .hero_column_1 {
 	max-width: 60rem;
@@ -41,7 +47,7 @@
 }
 .hero_form__radio {
 	@extend %base_button;
-	
+
 	height: 6rem;
 	line-height: 6rem;
 	font-weight: 700;
@@ -84,12 +90,12 @@
 	.span_1 {
 		font-size: 3.1rem;
 		color: $c_black;
-		margin-right: .6rem;
+		margin-right: 0.6rem;
 	}
 	.span_2 {
 		color: #2cc84d;
 		font-weight: 700;
-		padding-left: .6rem;
+		padding-left: 0.6rem;
 	}
 }
 .hero_column_1_row__2 {
@@ -101,25 +107,42 @@
 		font-weight: 700;
 		color: #ff7c3b;
 		text-transform: uppercase;
-		padding-left: .6rem;
+		padding-left: 0.6rem;
 	}
 }
 .hero_img {
 	height: auto;
-	width: 68rem;
 	object-fit: contain;
+	
+	@include bp-max($point_3) {
+		width: 50rem;
+	}
+	@include bp-min($point_2) {
+		width: 68rem;
+	}
 }
 .hero_decor__1 {
-	width: 73.8rem;
 	height: auto;
 	position: absolute;
 	top: -7.4rem;
 	left: -4.8rem;
+	@extend %hero_decor_1;
+
+	@include bp-max($point_3) {
+		width: 56.8rem;
+		height: 46.8rem;
+	}
+	@include bp-min($point_2) {
+		width: 73.8rem;
+		height: 60.8rem;
+	}
 }
 .hero_decor__2 {
 	width: 33.4rem;
+	height: 22.4rem;
 	object-fit: contain;
 	position: absolute;
 	top: -7rem;
 	left: -19rem;
+	@extend %hero_decor_2;
 }

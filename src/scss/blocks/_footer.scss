@@ -2,9 +2,19 @@
 
 .footer {
 	@extend %base_wrapper_v2;
+
+	@include bp-max($point_5) {
+		flex-direction: column;
+	}
+	@include bp-between($point_4, $point_3) {
+		flex-direction: column;
+	}
+	@include bp-min($point_2) {
+		flex-direction: row;
+	}
 }
 .footer_section {
-	background-color: #FFF0CB;
+	background-color: #fff0cb;
 	padding: 4.6rem 0rem;
 }
 .footer_left_side {
@@ -15,18 +25,34 @@
 .footer_logo__img {
 	width: 25.6rem;
 	height: auto;
-	margin-bottom: 2.4rem
+	margin-bottom: 2.4rem;
 }
 .footer_button {
 	@extend %orange_button;
+
+	@include bp-max($point_5) {
+		margin-bottom: 3rem
+	}
+	@include bp-between($point_4, $point_3) {
+		margin-bottom: 3rem
+	}
 }
 .footer_right_side {
 	@extend %base_wrapper;
-	
+
 	max-width: 58rem;
 	width: 100%;
 	align-items: flex-start;
 	gap: 2.4rem 0;
+
+	@include bp-max($point_5) {
+		align-items: center;
+		text-align: center;
+	}
+	@include bp-between($point_4, $point_3) {
+		align-items: center;
+		text-align: center;
+	}
 	a {
 		text-decoration: none;
 		color: $c_black;

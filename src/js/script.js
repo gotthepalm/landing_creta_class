@@ -1,6 +1,7 @@
 const body = document.querySelector('body');
 var swiper = new Swiper('.mySwiper', {
 	slidesPerView: 1,
+	slidesPerGroup: 1,
 	spaceBetween: 40,
 	loop: true,
 	pagination: {
@@ -11,6 +12,16 @@ var swiper = new Swiper('.mySwiper', {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
+	breakpoints: {
+		768: {
+			slidesPerView: 2,
+			// slidesPerGroup: 2,
+		},
+		1024: {
+			slidesPerView: 3,
+			// slidesPerGroup: 3,
+		}
+	},
 });
 
 // Window Scroll
@@ -18,29 +29,28 @@ const header = document.querySelector('.header_section');
 const topButton = document.querySelector('.top_button');
 window.addEventListener('scroll', () => {
 	if (window.scrollY > header.offsetHeight) {
-		header.classList.add('on_scroll')
+		header.classList.add('on_scroll');
 	} else {
-		header.classList.remove('on_scroll')
-
+		header.classList.remove('on_scroll');
 	}
 	if (window.scrollY > 150) {
-		topButton.classList.add('active')
+		topButton.classList.add('active');
 	} else {
-		topButton.classList.remove('active')
+		topButton.classList.remove('active');
 	}
 });
-// Mobile Menu 
-const menuButton = document.querySelector(".mobile_menu_button");
-const menu = document.querySelector(".mobile_menu");
-const menuLink = document.querySelectorAll('.mobile_menu__link')
+// Mobile Menu
+const menuButton = document.querySelector('.mobile_menu_button');
+const menu = document.querySelector('.mobile_menu');
+const menuLink = document.querySelectorAll('.mobile_menu__link');
 
-menuButton.addEventListener("click", function () {
-	menuButton.classList.toggle("active");
+menuButton.addEventListener('click', function () {
+	menuButton.classList.toggle('active');
 });
-menuLink.forEach((item) => {
+menuLink.forEach(item => {
 	item.addEventListener('click', () => {
 		menuButton.classList.remove('active');
-	})
+	});
 });
 
 // Tabs

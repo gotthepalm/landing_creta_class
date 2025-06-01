@@ -51,6 +51,8 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
+		flex-shrink: 0;
+		transition: all 0.3s ease;
 	}
 	&:not(.active) + .accordion__content {
 		visibility: hidden;
@@ -61,7 +63,7 @@
 			padding: 0 5rem 5rem 5rem;
 		}
 		span {
-			transform: rotate(180deg);
+			transform: rotateX(180deg);
 		}
 	}
 }
