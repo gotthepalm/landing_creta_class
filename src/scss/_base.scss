@@ -1,12 +1,27 @@
 @use './helpers/abstracts' as *;
 
 :root {
-	--header-height: 12rem;
+	@include bp-min($point_2) {
+		--header-height: 12rem;
+	}
+	@include bp-max($point_3) {
+		--header-height: 8rem;
+	}
 }
 html {
 	// font-size: calc(100dvw / 1920 * 10);
 	font-size: 10px;
 	font-family: $f_Inter;
+
+	@include bp-min(1540px) {
+		font-size: 10px;
+	}
+	@include bp-between($point_2, 1229.98px) {
+		font-size: calc(100dvw / 1230 * 10);
+	}
+	@include bp-max(639.98px) {
+		font-size: calc(100dvw / 640 * 10);
+	}
 }
 
 html,

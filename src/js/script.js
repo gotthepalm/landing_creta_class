@@ -33,7 +33,7 @@ window.addEventListener('scroll', () => {
 	} else {
 		header.classList.remove('on_scroll');
 	}
-	if (window.scrollY > 150) {
+	if (window.scrollY > 200) {
 		topButton.classList.add('active');
 	} else {
 		topButton.classList.remove('active');
