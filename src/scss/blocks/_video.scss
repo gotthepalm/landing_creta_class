@@ -1,0 +1,64 @@
+@use '../helpers/abstracts' as *;
+
+.video_section {
+    @extend %section_padding;
+
+    background-color: #F6F6F6;
+    background-image: url(../imgs/video_section_bg.png);
+    background-position: -14rem 0rem;
+    background-size: 208rem;
+    background-repeat: no-repeat;
+}
+.video {
+    .section_title {
+        margin-bottom: 6rem;
+    }
+}
+.video_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.video_tabs {
+    max-width: 120rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 9rem
+}
+.video_tab__button {
+    @extend %base_button;
+
+    display: flex;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4e4e4e;
+    height: 7rem;
+    line-height: 7rem;
+    padding: 0 5rem 0 2rem;
+    border-radius: 5px;
+    background-color: #fafafa;
+    border-left: 4px solid #eeeeee;
+    border-right: none;
+    transition: all 0.2s ease;
+}
+.video_tab__button:not(.active) {
+    transform: translateX(1.4rem);
+}
+.video_tab__content {
+    height: 57rem;
+    max-width: 84rem;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    background-color: #fafafa;
+}
+.video_tab_content__in {
+    height: 100%;
+    width: 100%;
+}
+.video_tab__content:not(.active) {
+    display: none;
+}

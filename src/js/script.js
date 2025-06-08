@@ -62,6 +62,7 @@ tabsNavAll.forEach(tabNav => {
 		if (tabNav.classList.contains('active')) return;
 		tabsNavAll.forEach(nav => nav.classList.remove('active'));
 		tabsContentAll.forEach(content => content.classList.remove('active'));
+		console.log(event)
 		tabNav.classList.add('active');
 		const targetContentId = event.currentTarget.dataset.tab;
 		const targetContent = document.querySelector(`[data-tab-content="${targetContentId}"]`);
@@ -99,5 +100,21 @@ accordionTitleAll.forEach(function (item) {
 			const content = item.nextElementSibling;
 			content.style.height = content.scrollHeight + 'px';
 		}
+	});
+});
+// Video Tabs
+const videoTabsNavAll = document.querySelectorAll('[data-video-tab]');
+const videoTabsContentAll = document.querySelectorAll('[data-video-tab-content]');
+
+videoTabsNavAll.forEach(item => {
+	item.addEventListener('click', event => {
+		if (item.classList.contains('active')) return;
+		videoTabsNavAll.forEach(button => button.classList.remove('active'));
+		videoTabsContentAll.forEach(content => content.classList.remove('active'));
+		item.classList.add('active');
+		console.log(event)
+		const targetContentId = event.target.dataset.videoTab;
+		const targetContent = document.querySelector(`[data-video-tab-content="${targetContentId}"]`);
+		targetContent.classList.add('active');
 	});
 });

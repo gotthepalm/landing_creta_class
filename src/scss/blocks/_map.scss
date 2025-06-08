@@ -1,0 +1,9 @@
+@use '../helpers/abstracts' as *;
+
+.map_section {
+    @extend %section_padding;
+}
+.map_iframe {
+    height: 70rem;
+    width: 100%;
+}
